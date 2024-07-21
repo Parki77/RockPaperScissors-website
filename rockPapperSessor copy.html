@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RockPaperSessior</title>
+  <link rel="stylesheet" href="rockpaper.css">
+</head>
+<body>
+  <p class="title">Rock Paper Scissor</p>
+  <button class="move" onclick="
+   let rockres=pickcomputermove();
+   if(rockres==='Rock')
+   {
+    wini.tie++;
+    document.querySelector('.js-result').innerHTML='you Tieed';
+   }
+   else if(rockres==='Paper'){
+    wini.loses++;
+    document.querySelector('.js-result').innerHTML='you lost';
+   }
+   else{
+    wini.wins++;
+    document.querySelector('.js-result').innerHTML='you won';
+   }
+   score();
+   document.querySelector('.js-move').
+   innerHTML=`you: ${'rock'}- computermove:${rockres}`;
+
+  "><img src="images/rock-emoji.png" alt="error" class="rock"></button>
+    
+  <button class="move" onclick="
+    let pepres=pickcomputermove();
+   if(pepres==='Rock')
+   {
+    wini.wins++;
+    document.querySelector('.js-result').innerHTML='you won';
+   }
+   else if(pepres==='Paper'){
+    wini.tie++;
+    document.querySelector('.js-result').innerHTML='you Tieed';
+   }
+   else{
+    wini.loses++;
+    document.querySelector('.js-result').innerHTML='you lost';
+   }
+   score();
+   document.querySelector('.js-move').innerHTML=`you: ${'paper'}- computermove:${pepres}`;
+  "><img src="images/paper-emoji.png" alt="" class="rock"></button>
+
+
+  <button   class="move" onclick="
+   let sesres=pickcomputermove();
+   if(sesres==='Rock')
+   {
+    wini.loses++;
+    document.querySelector('.js-result').innerHTML='you lost';
+   }
+   else if(sesres==='Paper'){
+    wini.wins++;
+    document.querySelector('.js-result').innerHTML='you lost';
+   }
+   else{
+    wini.tie++;
+    document.querySelector('.js-result').innerHTML='you Tieed';
+   }
+   score();
+   document.querySelector('.js-move').innerHTML=`you: ${'sessior'}- computermove:${sesres}`;
+  
+  "><img src="images/scissors-emoji.png" alt="" class="rock"></button>
+  <p class="js-result result">you win</p>
+  <p class="js-move"></p>
+  <p class="js-score score"></p>
+  <button onclick="wini.loses=0;
+    wini.tie=0;
+    wini.wins=0;
+    score();
+  ">Reset</button>
+  <button class="auto-play" onclick="
+    autoplay();
+  ">Auto play</button>
+  
+  
+  <script src="rock-paper-sessior.js ">
+    
+  </script>
+</body>
+</html>
